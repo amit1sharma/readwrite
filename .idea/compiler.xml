@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="com.amt.readwrite.core.main" target="1.8" />
+      <module name="com.amt.readwrite.core.test" target="1.8" />
+      <module name="readwrite.read.main" target="1.8" />
+      <module name="readwrite.read.test" target="1.8" />
+      <module name="readwrite.replicator.main" target="1.8" />
+      <module name="readwrite.replicator.test" target="1.8" />
+      <module name="readwrite.write.main" target="1.8" />
+      <module name="readwrite.write.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

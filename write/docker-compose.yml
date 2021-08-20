@@ -1,0 +1,17 @@
+services:
+  write-app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db-mysql
+  db-mysql:
+    container_name: write-container
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: welcome
+      MYSQL_DATABASE: write_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"

@@ -1,0 +1,28 @@
+services:
+  read-app:
+    container_name: read-web-container
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - db-mysql
+    networks:
+      - amt
+    depends_on:
+      - db-mysql
+  db-mysql:
+    container_name: read-mysql-container
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: welcome
+      MYSQL_DATABASE: read_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    networks:
+      - amt
+networks:
+  amt:
+    internal: true
